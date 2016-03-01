@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+coverage run --source app test.py
+coverage report
+coverage html
+firefox htmlcov/index.html
