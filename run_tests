@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
 export APPROVALS_TEXT_DIFF_TOOL="meld"
-coverage run --branch --source app test.py
+coverage run --branch --source app,ascript -m unittest discover -p "test*.py"
 coverage report
 coverage html
