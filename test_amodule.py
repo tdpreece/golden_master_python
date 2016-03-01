@@ -1,4 +1,4 @@
-import app
+import amodule
 import mock
 import random
 import unittest
@@ -12,7 +12,7 @@ class TestApp(unittest.TestCase):
     @mock.patch('sys.stdout', new_callable=StringIO)
     def test(self, stdout):
         random.seed(0)
-        app.main()
+        amodule.main()
         reporter = TextDiffReporter()
         Approvals.verify(stdout.getvalue(), reporter)
 
